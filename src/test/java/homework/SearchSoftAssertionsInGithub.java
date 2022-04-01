@@ -22,7 +22,9 @@ public class SearchSoftAssertionsInGithub {
     void searchRepo () {
         open("/selenide/selenide");
         $("#wiki-tab").click();
-        $(".Layout-main").find(byText("Soft assertions")).click();
-        $("#user-content-3-using-junit5-extend-test-class").parent().shouldHave(text("Using JUnit5 extend test class:"));
+        $(byText("Show 2 more pages…")).scrollTo().click();
+        $(byText("SoftAssertions")).click();
+        $("#user-content-3-using-junit5-extend-test-class").parent().shouldHave(text(" JUnit5 extend test class:"));
+        sleep(5000);
     }
 }

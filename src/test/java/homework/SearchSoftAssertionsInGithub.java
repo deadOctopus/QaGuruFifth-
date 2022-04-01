@@ -25,6 +25,6 @@ public class SearchSoftAssertionsInGithub {
         $(byText("Show 2 more pages…")).scrollTo().click();
         $(byText("SoftAssertions")).click();
         $("#user-content-3-using-junit5-extend-test-class").parent().shouldHave(text(" JUnit5 extend test class:"));
-        sleep(5000);
+        //sleep(5000);
     }
 }
